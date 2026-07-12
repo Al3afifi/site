@@ -34,7 +34,12 @@ function App() {
           </div>
         </div>
       </div>
-      
+
+      {/* TODO: make transition smoother */}
+      {/* TODO: Make background color easier to look at */}
+      {/* TODO: Add projects page */}
+          {/* TODO: make projects page include skills that are selectable and highlightable */}
+
       <About/>
 
       <div className="card">
