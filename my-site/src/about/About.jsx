@@ -8,8 +8,10 @@ function About() {
                 <h2 className='about-subheader'>About Me</h2>
                 <p className='about-summary'>
                     Hi! I'm Muhammad Alafifi, an aspiring software engineer with a passion for learning new technologies and seeing my creations come to fruition for the public.
-                    I graduated from Rensselaer Polytechnic Institute with a B.S. in Computer Science in 2025.
-                    I'm currently most interested in - and researching - distributed systems and cloud computing. I have hands-on experience in building scalable fault-tolerant systems, working with virtualization technologies like Docker, and building cloud based solutions. I also worked extensively with web development, creating responsive and user-friendly interfaces using React and other modern frameworks on both the front-end and back-end.
+                    I am a master's student currently studying towards my Engineering Artificial Intelligence degre at Stony Brook University. I graduated from Rensselaer Polytechnic Institute with a B.S. in Computer Science in 2025.
+                    I'm currently most interested in - and researching - distributed systems and cloud computing. 
+                    I have hands-on experience in building scalable fault-tolerant systems, working with virtualization technologies like Docker, building cloud based solutions, and creating and testing a variety of machine learning models. 
+                    I also worked extensively with web development, creating responsive and user-friendly interfaces using React and other modern frameworks on both the front-end and back-end.
                 </p>
                 <p className='about-summary'>
                     I started my journey in programming and development at a young age, initially exploring HTML and CSS then later Java to create simple games. I was driven with the hope of building the same types of creations that captivated me as a child, especially seeing how they brought together families and friends with ease.

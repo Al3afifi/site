@@ -1,0 +1,10 @@
+#experiences_page {
+    margin-top: 50px;
+    scroll-margin-top: 100px;
+    background-color: red;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* justify-content: space-around; */
+}

@@ -1,0 +1,69 @@
+[
+  {
+    "id": 1,
+    "title": "2D Heat Equation Simulation Using Parallel Computing",
+    "myTitle": "Project Developer",
+    "description": [
+      "Implemented a 2D heat equation solver in C++ using MPI for distributed memory parallelism and NVIDIA’s CUDA for GPU acceleration, benchmarking strong and weak scaling across more parallelized systems.",
+      "Achieved an 864x speedup over serial by deploying 12 GPUs on the AiMOS supercomputer, applying row-wise domain decomposition, “halo” region exchange via MPI p2p communication, and shared memory to optimize GPU memory access."
+    ],
+    "skills": ["C++", "C", "MPI", "CUDA", "Parallel Computing", "POSIX threads", "Distributed Systems"],
+    "links": {
+      "github": "",
+      "live": ""
+    }
+  },
+  {
+    "id": 2,
+    "title": "Distributed Key-Value Store Implementation",
+    "myTitle": "Project Developer",
+    "description": [
+      "Designed, implemented, and stress tested a fault-tolerant network system in Java through replicated servers supporting causal consistency, consensus based replication (Paxos), and Byzantine fault-tolerance."
+    ],
+    "skills": ["Java", "Network Programming", "Distributed Systems"],
+    "links": {
+      "github": "",
+      "live": ""
+    }
+  },
+  {
+    "id": 3,
+    "title": "IBM Widget for Interactive Quantum Art",
+    "myTitle": "Project Student Lead",
+    "description": [
+      "Built a widget to simulate fractal art based on qubits using IBM’s Qiskit in Python in order to introduce children and the public into the field of Quantum Computing."
+    ],
+    "skills": ["Python", "Qiskit", "Quantum Computing", "Quantum Physics", "Interactive Visualization"],
+    "links": {
+      "github": "",
+      "live": ""
+    }
+  },
+  {
+    "id": 4,
+    "title": "RCOS Thrifty",
+    "myTitle": "Project Co-Lead/Full-stack Developer",
+    "description": [
+      "Developed a full stack p2p marketplace for RPI students, enabling buying and selling old or used items.",
+      "Used React.js frontend and Firebase for authentication and backend for real time listings & communication."
+    ],
+    "skills": ["JavaScript", "React.js", "Firebase", "NoSQL"],
+    "links": {
+      "github": "https://github.com/al3afifi",
+      "live": ""
+    }
+  },
+  {
+    "id": 5,
+    "title": "RCOS CRISIS",
+    "myTitle": "Frontend Developer",
+    "description": [
+      "Team member developing a more accessible website, CRISIS, with a more modern and easily usable interface for RPI’s course and degree information."
+    ],
+    "skills": ["TypeScript", "React.js", "HTML", "CSS"],
+    "links": {
+      "github": "https://github.com/al3afifi",
+      "live": ""
+    }
+  }
+]

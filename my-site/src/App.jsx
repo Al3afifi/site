@@ -5,7 +5,10 @@ import headshot from './assets/headshot.jpg'
 import sunset from './imgs/sunset2.webp'
 import Header from './header/Header.jsx'
 import About from './about/About.jsx'
+import Experiences from './experiences/Experiences.jsx'
+import Projects from './projects/Projects.jsx'
 import './App.css'
+// npm run dev
 
 function App() {
   const [count, setCount] = useState(0)
@@ -41,6 +44,8 @@ function App() {
           {/* TODO: make projects page include skills that are selectable and highlightable (filters) */}
 
       <About/>
+      <Experiences/>
+      <Projects/>
 
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
