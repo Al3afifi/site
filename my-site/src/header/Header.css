@@ -11,21 +11,24 @@
     top: 0;
     margin: 0 auto; /* Center the header */
     width: 95vw; /* Full width */
-    transition: 0.4s; /* Add a transition effect (when scrolling - and font size is decreased) */
+    transition: 0.5s ease; /* Add a transition effect (when scrolling - and font size is decreased) */
 
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 2;
+    z-index: 5;
 }
 
 .header-link-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 20px; /* Space between links */
+    transition: inherit;
+    /* gap: 20px; */
+
     /* background: pink; */
     /* background-color: var(--background-color); */
+    border-radius: 0px 0px 8px 8px;
 }
 
 .header-link{
