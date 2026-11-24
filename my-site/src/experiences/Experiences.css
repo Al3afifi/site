@@ -1,10 +1,180 @@
 #experiences_page {
     margin-top: 50px;
     scroll-margin-top: 100px;
-    background-color: red;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.experiences-container {
+    width: 70vw;
+    max-width: 1100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.experiences-subheader {
+    font-weight: bold;
+    color: var(--text-color);
+    margin: 20px 0;
+}
+
+.experiences-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.experience-box {
+    background-color: var(--background-color);
+    box-shadow: 0px 6px 8px -4px var(--accent-color);
+    border-radius: 8px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.experience-box:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 8px 12px -2px var(--background2-color);
+}
+
+.experience-header {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    /* justify-content: space-around; */
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+.experience-title-role {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+}
+
+.experience-title {
+    font-weight: bold;
+    font-size: 1.4em;
+    color: var(--text-color);
+    margin: 0;
+}
+
+.experience-role {
+    font-size: 1em;
+    font-weight: 600;
+    color: var(--accent-color);
+}
+
+.experience-dates {
+    font-size: 0.95em;
+    font-weight: 500;
+    color: var(--text-color);
+    opacity: 0.85;
+    white-space: nowrap;
+}
+
+.experience-description-container {
+    width: 100%;
+}
+
+.experience-bullets {
+    margin: 10px 0 16px 0;
+    padding-left: 20px;
+    color: var(--text-color);
+    font-size: 1.1em;
+    line-height: 1.5;
+}
+
+.experience-bullets li {
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+.experience-summary {
+    font-size: 1.1em;
+    line-height: 1.5;
+    margin: 10px 0 16px 0;
+    color: var(--text-color);
+    text-align: left;
+}
+
+.experience-skills {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+.experience-skill {
+    font-size: 0.9em;
+    color: var(--text-color-old);
+    padding: 2px 6px;
+    box-shadow: 1px 2px 2px 0px var(--accent2-color);
+    background-color: var(--background2-color);
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.experience-skill:hover {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    cursor: pointer;
+    transform: scale(1.05);
+    box-shadow: none;
+}
+
+.experience-buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.experience-button {
+    border: var(--text-color) 1.5px solid;
+    border-radius: 8px;
+    padding: 0.2em 0.8em;
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s, transform 0.2s;
+}
+
+.experience-button:hover {
+    background-color: var(--text-color);
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+    transform: scale(1.08);
+}
+
+@media (max-width: 900px) {
+    .experiences-container {
+        width: 90vw;
+        padding: 16px;
+    }
+
+    .experience-box {
+        padding: 16px;
+    }
+
+    .experience-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
 }

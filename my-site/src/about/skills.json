@@ -1,7 +1,7 @@
 {
-    "Prog": ["C", "C++", "Java", "Python", "JavaScript", "React", "Docker", "AWS"],
-    "Soft:" : ["Git", "Jenkins", "Kubernetes", "MySQL", "PostgreSQL"],
-    "Libraries": ["SciKit-learn", "NumPy", "Pandas"],
-    "Paradigms": ["Object-Oriented Prog.", "Machine Learning", "Supervised Learning", "Functional Prog.", "Procedural Prog.", "Agile", "Scrum"],
+    "Prog": ["C", "C++", "Java", "Python", "JavaScript", "TypeScript", "Erlang", "Haskell", "Verilog", "SystemVerilog", "C#", "Prolog", "SALSA", "Oz"],
+    "Soft:" : ["Git", "Jenkins", "Kubernetes", "MySQL", "PostgreSQL", "Docker", "AWS", "GCP", "Azure", "Firebase", ""],
+    "Libraries": ["CUDA", "MPI", "SciKit-learn", "NumPy", "Pandas", "React.js", "PyTorch", "Qiskit"],
+    "Paradigms": ["Object-Oriented Prog.", "Machine Learning", "Deep Learning", "Neural Networks","Supervised Learning", "Functional Prog.", "Procedural Prog.", "Concurrent Prog.", "Agile", "Scrum"],
     "Lang": ["English", "Arabic", "Spanish", "Chinese (Mandarin)"]
 }

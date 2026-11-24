@@ -1,8 +1,8 @@
 
 #header {
-    /* background-color: var(--background2-color); Grey background */
+    /* background-color: var(--background-color); Grey background */
     /* opacity: 0.5; */
-    padding:20px 10px; /* Some padding */
+    /* padding:20px 10px; Some padding */
     color: var(--text-color);
     text-align: center; /* Centered text */
     font-size: 30px; /* Big font size */
@@ -25,19 +25,29 @@
     align-items: center;
     gap: 20px; /* Space between links */
     /* background: pink; */
+    /* background-color: var(--background-color); */
 }
 
 .header-link{
-    /* background-color: pink; */
     all:unset;
     color: var(--text-color);
     padding: 0.1em;
+    
+    border: 1px solid transparent;
+    border-radius: 8px;
 
+    background-color: rgb(from var(--background-color) r g b / 0.8);;
+    
 }
 
 .header-link:hover {
     color: var(--accent-color);
     cursor: pointer;
     border: 1px solid var(--accent-color);
+    /* border-top: transparent; */
+    /* border-radius: 0 0 8px 8px; */
     border-radius: 8px;
+     /* border: 2px solid #333;
+  border-bottom: 0;
+  border-radius: 12px 12px 0 0;  */
 }

@@ -28,10 +28,11 @@
   },
   {
     "id": 3,
-    "title": "IBM Widget for Interactive Quantum Art",
+    "title": "Widget for Interactive Quantum Art",
     "myTitle": "Project Student Lead",
     "description": [
-      "Built a widget to simulate fractal art based on qubits using IBM’s Qiskit in Python in order to introduce children and the public into the field of Quantum Computing."
+      "Built a widget to simulate fractal art based on qubits using IBM’s Qiskit in Python in order to introduce children and the public into the field of Quantum Computing.",
+      "Built apart of the Rensselaer Center for Open Source organization in collaboration with IBM team members"
     ],
     "skills": ["Python", "Qiskit", "Quantum Computing", "Quantum Physics", "Interactive Visualization"],
     "links": {
@@ -45,7 +46,8 @@
     "myTitle": "Project Co-Lead/Full-stack Developer",
     "description": [
       "Developed a full stack p2p marketplace for RPI students, enabling buying and selling old or used items.",
-      "Used React.js frontend and Firebase for authentication and backend for real time listings & communication."
+      "Used React.js frontend and Firebase for authentication and backend for real time listings & communication.",
+      "Built apart of the Rensselaer Center for Open Source organization"
     ],
     "skills": ["JavaScript", "React.js", "Firebase", "NoSQL"],
     "links": {
@@ -58,7 +60,8 @@
     "title": "RCOS CRISIS",
     "myTitle": "Frontend Developer",
     "description": [
-      "Team member developing a more accessible website, CRISIS, with a more modern and easily usable interface for RPI’s course and degree information."
+      "Team member developing a more accessible website, CRISIS (\"Correcting Rensselaer's Insufferable Student Information System\"), with a more modern and easily usable interface for RPI’s course and degree information.",
+      "Built apart of the Rensselaer Center for Open Source organization"
     ],
     "skills": ["TypeScript", "React.js", "HTML", "CSS"],
     "links": {

@@ -4,6 +4,7 @@ import skills from './skills.json'
 function About() {
     return (
         <div id='about_page'>
+            
             <div className="about-container"  id='about_jump'>
                 <h2 className='about-subheader'>About Me</h2>
                 <p className='about-summary'>

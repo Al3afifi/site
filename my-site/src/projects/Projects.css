@@ -31,9 +31,11 @@
 
 .project-box {
     background-color: var(--background-color);
-    box-shadow: 0px 6px 8px -4px var(--background2-color);
-    border: 1px solid var(--accent2-color);
-    border-radius: 10px;
+    /* box-shadow: 0px 6px 8px -4px var(--background2-color); */
+
+    box-shadow: 0px 6px 8px -4px var(--accent-color);
+    /* border: 0.5px solid var(--accent2-color); */
+    border-radius: 8px;
     padding: 24px;
     display: flex;
     flex-direction: column;

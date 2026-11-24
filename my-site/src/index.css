@@ -2,6 +2,7 @@
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
+  font-size: 0.8em;
   
   --accent-color: #bc6c25;
   --accent2-color: #dda15e;
@@ -10,6 +11,8 @@
   --background2-color: #606c38;
   --background-color-old: #F1F8E9;
   --background-color: #283618;
+
+  --page-width: 80vw;
 
   /* --accent-color: #d4a373;
   --accent2-color: #faedcd;
@@ -83,3 +86,42 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  /* box-shadow: inset 0 0 5px grey;
+  border-radius: 10px; */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--accent2-color);
+  border-radius: 10px;
+}
+
+/* .scroll-container {
+  overflow-y: auto;
+
+  /* Standard (Firefox, Chrome 121+, Edge 121+) */
+  /* Format: <thumb-color> <track-color> */
+  /* scrollbar-color: rgba(0, 0, 0, 0.4) transparent; */
+/* } */
+/* /*  */
+/* Safari & older WebKit fallback */
+/* .scroll-container::-webkit-scrollbar { */
+  /* width: 8px; Required for custom styling to apply */
+/* } */
+
+/* .scroll-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 4px;
+} */ 

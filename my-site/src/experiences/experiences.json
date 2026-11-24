@@ -1,0 +1,63 @@
+[
+  {
+    "id": 1,
+    "company": "Stony Brook University",
+    "role": "Teaching Assistant",
+    "startDate": "August 2026",
+    "endDate": "Present",
+    "description": [
+      "Designed and graded assignments for Data Structures and OOP (ESE 224), guiding & assisting a class of 80 students through the fundamentals of programming.",
+      "Held weekly office hours & lab sessions, teaching and guiding students with course topics, assignments, and programming concepts."
+    ],
+    "skills": ["Java", "Data Structures", "OOP", "C++", "Teaching"]
+  },
+  {
+    "id": 2,
+    "company": "Data Annotation Tech",
+    "role": "Software Developer (Freelance)",
+    "startDate": "May 2024",
+    "endDate": "December 2025",
+    "description": [
+      "Developed and evaluated software to train AI and LLMs with precise labels and guidelines to improve response accuracy.",
+      "Focused on debugging and fine-tuning code segments across diverse topics and languages (including Python, Java, JavaScript, and C).",
+      "Created and executed CI/CD LLM evaluation loops, leveraging autonomous AI coding agents to benchmark code generation efficiency and evaluate prompt structures."
+    ],
+    "skills": ["Python", "Java", "JavaScript", "C", "LLM Evaluation", "Prompt Engineering", "CI/CD"]
+  },
+  {
+    "id": 3,
+    "company": "Rensselaer Polytechnic Institute",
+    "role": "Undergraduate Mentor",
+    "startDate": "August 2024",
+    "endDate": "December 2024",
+    "description": [
+      "Designed and graded assignments for Programming Languages (CSCI 4430) for a class of 440 students.",
+      "Held weekly office hours, providing 1:1 guidance on complex theoretical topics and debugging across functional, concurrent, distributed, and logic programming paradigms (Haskell, Erlang, Prolog)."
+    ],
+    "skills": ["Haskell", "Erlang", "Prolog", "Functional Programming", "Concurrent Programming"]
+  },
+  {
+    "id": 4,
+    "company": "City Health Tech",
+    "role": "Software Engineer Intern",
+    "startDate": "May 2023",
+    "endDate": "December 2024",
+    "description": [
+      "Architected and deployed a full stack, AI-powered platform (1Kind.AI) via Azure hosting and CLI, enabling users to discover and assist each other with acts of kindness.",
+      "Built and iterated the UX frontend in React and TypeScript with a mutable database for CRUD operations, authentication, and CI/CD pipelines in an Agile Scrum team.",
+      "Achieved over 95% positive feedback from beta testers regarding design and functionality metrics."
+    ],
+    "skills": ["React", "TypeScript", "Azure", "Cloud Computing", "Agile/Scrum", "CI/CD"]
+  },
+  {
+    "id": 5,
+    "company": "Brookhaven National Laboratory",
+    "role": "C2QA QIS101 Summer Program",
+    "startDate": "June 2022",
+    "endDate": "July 2022",
+    "description": [
+      "Simulated digital and quantum circuits using Python and IBM Qiskit, applying linear algebra, algorithmic analysis, and machine learning to investigate trade-offs between classical and quantum computing."
+    ],
+    "skills": ["Python", "Qiskit", "Quantum Computing", "Linear Algebra", "Simulation"]
+  }
+]

@@ -18,9 +18,7 @@ function App() {
       <Header />
     
       <img src={sunset} className="sunset" alt="background" />
-      <div className="sunset-credit">
-        Photo by Me! @ The Mojave Desert
-      </div>
+      
       <div className='home'>
 
         <div className='title-container'>
@@ -37,7 +35,9 @@ function App() {
           </div>
         </div>
       </div>
-
+      <div className="sunset-credit">
+        Photo by Me! @ The Mojave Desert
+      </div>
       {/* TODO: make transition smoother */}
       {/* TODO: Make background color easier to look at */}
       {/* TODO: Add projects page */}
