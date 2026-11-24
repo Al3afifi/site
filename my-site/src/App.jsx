@@ -8,6 +8,7 @@ import About from './about/About.jsx'
 import Experiences from './experiences/Experiences.jsx'
 import Projects from './projects/Projects.jsx'
 import './App.css'
+import './Contact.css'
 // npm run dev
 
 function App() {
@@ -48,7 +49,29 @@ function App() {
       <Projects/>
 
       <div id="contact_page">
+        <div className="contact-buttons">
+            <a href="mailto:alafifiofficial@gmail.com">
+                Email
+            </a>
+            <a
+                href="https://www.linkedin.com/in/muhammad-alafifi/"
+                target="_blank"
+                rel="noreferrer"
+                className="contact-button"
+            >
+                LinkedIn
+            </a>
+            <a
+                href="https://github.com/al3afifi"
+                target="_blank"
+                rel="noreferrer"
+                className="contact-button"
+            >
+                GitHub
+            </a>
+        </div>
 
+        <p className="contact-email-text">{"alafifiofficial@gmail.com"}</p>
       </div>
 
       <div className="card">
