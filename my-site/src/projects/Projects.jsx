@@ -1,9 +1,22 @@
 import './Projects.css';
 import projectsData from './projects.json';
+import particlesConfig from './assets/particles.json';
+import { Particles, ParticlesProvider } from '@tsparticles/react';
+import { loadSlim } from '@tsparticles/slim';
 
 function Projects() {
     return (
         <div id="projects_page">
+            <ParticlesProvider init={loadSlim}>
+                <Particles
+                    id="particles-js"
+                    options={{
+                        ...particlesConfig,
+                        fullScreen: { enable: false }
+                    }}
+                />
+            </ParticlesProvider>
+
             <div className="projects-container">
                 <h2 className="projects-subheader">Projects</h2>
                 <div className="projects-list">
