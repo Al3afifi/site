@@ -15,8 +15,10 @@
         "enable": true
       }
     },
-    "color": {
-      "value": "#ffffff"
+    "paint": {
+      "color": {
+        "value": "#ffffff"
+      }
     },
     "shape": {
       "type": "circle"

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import headshot from './assets/headshot.jpg'
@@ -9,10 +9,25 @@ import Experiences from './experiences/Experiences.jsx'
 import Projects from './projects/Projects.jsx'
 import './App.css'
 import './Contact.css'
+
 // npm run dev
+const THEMES = [
+      { id: 'dark', label: 'Forest (Dark)' },
+      { id: 'light', label: 'Sage (Light)' },
+      { id: 'sand', label: 'Sand (Warm)' },
+    ];
+
 
 function App() {
   const [count, setCount] = useState(0)
+  const [theme, setTheme] = useState(() => localStorage.getItem('theme') || 'dark');
+  const [themeOpen, setThemeOpen] = useState(false);
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+  }, [theme]);
+
 
   return (
     <>
@@ -46,7 +61,7 @@ function App() {
 
       <About/>
       <Experiences/>
-      <Projects/>
+      <Projects theme={theme}/>
 
       <div id="contact_page">
         <hr className="contact-divider" />
@@ -57,10 +72,34 @@ function App() {
         </span>        
       </div>
 
-      <div className="card">
+      <div className="card bottom-controls">
         <button onClick={() => setCount((count) => count + 1)}>
           ADHD fidget button {count}
         </button>
+        <div className="theme-dropup">
+          {themeOpen && (
+            <div className="theme-menu">
+              {THEMES.map((t) => (
+                <button
+                  key={t.id}
+                  className={`theme-option ${theme === t.id ? 'active' : ''}`}
+                  onClick={() => {
+                    setTheme(t.id);
+                    setThemeOpen(false);
+                  }}
+                >
+                  {t.label}
+                </button>
+              ))}
+            </div>
+          )}
+          <button
+            className="theme-toggle-btn"
+            onClick={() => setThemeOpen((prev) => !prev)}
+          >
+            Theme: {THEMES.find((t) => t.id === theme)?.label} ▲
+          </button>
+        </div>
       </div>
     </>
   )

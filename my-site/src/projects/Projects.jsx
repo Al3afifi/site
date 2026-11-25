@@ -1,21 +1,58 @@
 import './Projects.css';
+import { useEffect, useMemo, useState } from 'react';
 import projectsData from './projects.json';
 import particlesConfig from './assets/particles.json';
 import { Particles, ParticlesProvider } from '@tsparticles/react';
 import { loadSlim } from '@tsparticles/slim';
 
-function Projects() {
+const getCssParticleColor = () =>
+    getComputedStyle(document.documentElement)
+        .getPropertyValue('--particles-color')
+        .trim() || '#ffffff';
+
+function Projects({ theme }) {
+    const [particleColor, setParticleColor] = useState(getCssParticleColor);
+
+    useEffect(() => {
+        const updateColor = () => setParticleColor(getCssParticleColor());
+        updateColor();
+
+        // Wait for App's effect to update data-theme on <html>, then read the resolved hex color
+        const observer = new MutationObserver(updateColor);
+        observer.observe(document.documentElement, {
+            attributes: true,
+            attributeFilter: ['data-theme'],
+        });
+        return () => observer.disconnect();
+    }, [theme]);
+
+    const particleOptions = useMemo(() => ({
+        ...particlesConfig,
+        fullScreen: { enable: false },
+        particles: {
+            ...particlesConfig.particles,
+            paint: {
+                ...particlesConfig.particles?.paint,
+                color: {
+                    value: particleColor,
+                },
+            },
+            links: {
+                ...particlesConfig.particles.links,
+                color: particleColor,
+            },
+        },
+    }), [particleColor]);
+
     return (
         <div id="projects_page">
             <ParticlesProvider init={loadSlim}>
                 <Particles
                     id="particles-js"
-                    options={{
-                        ...particlesConfig,
-                        fullScreen: { enable: false }
-                    }}
+                    options={particleOptions}
                 />
             </ParticlesProvider>
+
 
             <div className="projects-container">
                 <h2 className="projects-subheader">Projects</h2>

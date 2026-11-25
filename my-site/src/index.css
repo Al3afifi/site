@@ -4,13 +4,13 @@
   font-weight: 400;
   font-size: 0.8em;
   
-  --accent-color: #bc6c25;
+  /* --accent-color: #bc6c25;
   --accent2-color: #dda15e;
   --text-color-new: #030303;
   --text-color: #fefae0;
   --background2-color: #606c38;
   --background-color-old: #F1F8E9;
-  --background-color: #283618;
+  --background-color: #283618; */
 
   --page-width: 80vw;
 
@@ -30,6 +30,41 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+/* Default (Forest Dark) */
+:root,
+:root[data-theme="dark"] {
+  --accent-color: #bc6c25;
+  --accent2-color: #dda15e;
+  --text-color: #fefae0;
+  --text-color-old: #fefae0; /* used by skill pills in About/Projects/Experiences */
+  --background2-color: #606c38;
+  --background-color: #283618;
+  --particles-color: #ffffff;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Light Sage */
+:root[data-theme="light"] {
+  --accent-color: #bc6c25;
+  --accent2-color: #dda15e;
+  --text-color: #030303;
+  --text-color-old: #fefae0;
+  --background2-color: #606c38;
+  --background-color: #F1F8E9;
+  --particles-color: #606c38;
+}
+
+/* Sand / Pastel (from your commented palette) */
+:root[data-theme="sand"] {
+  --accent-color: #d4a373;
+  --accent2-color: #faedcd;
+  --text-color: #283618; /* dark text keeps contrast on #ccd5ae */
+  --text-color-old: #283618;
+  --background2-color: #e9edc9;
+  --background-color: #ccd5ae;
+  --particles-color: #bc6c25;
+}
+
 
 html { scroll-behavior: smooth; }
 
@@ -74,7 +109,7 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
     background-color: #ffffff;
@@ -85,7 +120,7 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
-}
+} */
 
 /* width */
 ::-webkit-scrollbar {
