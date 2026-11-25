@@ -49,38 +49,18 @@ function App() {
       <Projects/>
 
       <div id="contact_page">
-        <div className="contact-buttons">
-            <a href="mailto:alafifiofficial@gmail.com">
-                Email
-            </a>
-            <a
-                href="https://www.linkedin.com/in/muhammad-alafifi/"
-                target="_blank"
-                rel="noreferrer"
-                className="contact-button"
-            >
-                LinkedIn
-            </a>
-            <a
-                href="https://github.com/al3afifi"
-                target="_blank"
-                rel="noreferrer"
-                className="contact-button"
-            >
-                GitHub
-            </a>
-        </div>
-
-        <p className="contact-email-text">{"alafifiofficial@gmail.com"}</p>
+        <hr className="contact-divider" />
+        <h2 className="contact-header">Contact</h2>
+        <span className="contact-section">
+          <p className="contact-item">Email: <a href="mailto:alafifiofficial@gmail.com">alafifiofficial@gmail.com</a></p>
+          <p className="contact-item">LinkedIn: <a href='https://www.linkedin.com/in/muhammad-alafifi/' target='_blank'>linkedin.com/in/muhammad-alafifi/</a></p>  
+        </span>        
       </div>
 
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           ADHD fidget button {count}
         </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
       </div>
     </>
   )
