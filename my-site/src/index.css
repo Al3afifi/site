@@ -64,6 +64,61 @@
   --background-color: #ccd5ae;
   --particles-color: #bc6c25;
 }
+/* Midnight Mojave (matches your desert sunset photo) */
+:root[data-theme="mojave"] {
+  --accent-color: #e07a5f;  
+  --accent2-color: #f2cc8f;
+  --text-color: #f4f1de;   
+  --text-color-old: #f4f1de;
+  --background2-color: #23395b;
+  --background-color: #161925; 
+  --particles-color: #f2cc8f; 
+}
+  
+/* Nordic Slate (clean cool light theme) */
+:root[data-theme="slate"] {
+  --accent-color: #60a5fa; 
+  --accent2-color: #8d99ae;
+  --text-color: #1d2233;   
+  --text-color-old: #edf2f4;
+  --background2-color: #2b2d42;
+  --background-color: #edf2f4; 
+  --particles-color: #2b2d42; 
+}
+  
+/* Silly #1: Windows 3.1 Hotdog Stand */
+:root[data-theme="hotdog"] {            
+  --accent-color: #ff9800;  
+  --accent2-color: #4caf50;
+  --text-color: #1a1a1a;   
+  --text-color-old: #ffffff;
+  --background2-color: #d32f2f;
+  --background-color: #ffeb3b; 
+  --particles-color: #d32f2f; 
+}
+  
+/* Silly #2: Bubblegum Pop */
+:root[data-theme="bubblegum"] {
+  --accent-color: #c084fc;     
+  --accent2-color: #38bdf8;
+  --text-color: #3b0764;   
+  --text-color-old: #ffffff;
+  --background2-color: #ff4da6;
+  --background-color: #ffe5f1; 
+  --particles-color: #ff4da6; 
+}
+
+/* Espresso (Dark #281f1e) */
+:root[data-theme="espresso"] {
+  --accent-color: #c87d55;
+  --accent2-color: #e6ccb2;
+  --text-color: #f5ebe0;
+  --text-color-old: #f5ebe0;
+  --background2-color: #4a3531;
+  --background-color: #281f1e;
+  --particles-color: #e6ccb2;
+}
+
 
 
 html { scroll-behavior: smooth; }

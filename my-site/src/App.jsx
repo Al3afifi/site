@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, Fragment } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import headshot from './assets/headshot.jpg'
@@ -14,7 +14,12 @@ import './Contact.css'
 const THEMES = [
       { id: 'dark', label: 'Forest (Dark)' },
       { id: 'light', label: 'Sage (Light)' },
-      { id: 'sand', label: 'Sand (Warm)' },
+      { id: 'sand', label: 'Sand (Warm)' },  
+      { id: 'espresso', label: 'Charcoal (Darker)' },
+      { id: 'mojave', label: 'Streetlight (Darkest)' },
+      { id: 'slate', label: 'Glacier (Lighter)' },
+      { id: 'hotdog', label: 'Hotdog Stand 🌭' },                                                                
+      { id: 'bubblegum', label: 'Bubblegum Pop 🫧' },                                                            
     ];
 
 
@@ -79,17 +84,19 @@ function App() {
         <div className="theme-dropup">
           {themeOpen && (
             <div className="theme-menu">
-              {THEMES.map((t) => (
-                <button
-                  key={t.id}
-                  className={`theme-option ${theme === t.id ? 'active' : ''}`}
-                  onClick={() => {
-                    setTheme(t.id);
-                    setThemeOpen(false);
-                  }}
-                >
-                  {t.label}
-                </button>
+              {THEMES.map((t, index) => (
+                <Fragment key={t.id}>
+                  {index === 3 && <hr className="theme-divider" />}
+                  <button
+                    className={`theme-option ${theme === t.id ? 'active' : ''}`}
+                    onClick={() => {
+                      setTheme(t.id);
+                      setThemeOpen(false);
+                    }}
+                  >
+                    {t.label}
+                  </button>
+                </Fragment>
               ))}
             </div>
           )}

@@ -20,7 +20,7 @@ function About() {
 
                     Over the years, I've expanded my skill set to include C, C++, Python, and various web technologies as my passion for computers grew.
                     I've carried that same drive, of seeing my builds coming to life, towards more complex projects and the infrastructure behind much of the software we use daily, where I am exploring now.
-                    In my free time, I enjoy playing football (American soccer), mountain biking, and working out.
+                    In my free time, I enjoy playing football (American soccer), mountain hiking & biking, and working out.
                 </p>
             </div>
             <div className='about-skills-section'>

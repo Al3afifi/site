@@ -197,3 +197,11 @@
   background-color: var(--accent-color);
   color: var(--text-color);
 }
+
+.theme-divider {
+  width: 100%;
+  border: none;
+  border-top: 1px solid var(--accent2-color);
+  opacity: 0.45;
+  margin: 4px 0;
+}
