@@ -1,8 +1,8 @@
 
 #header {
-    /* background-color: var(--background-color); Grey background */
+    /* background-color: var(--background2-color); Grey background */
     /* opacity: 0.5; */
-    padding:20px 10px; 
+    padding: 0px 10px;
     color: var(--text-color);
     text-align: center; /* Centered text */
     font-size: 30px; /* Big font size */
@@ -19,16 +19,27 @@
     z-index: 5;
 }
 
+#header.scrolled {
+    font-size: 25px;
+    padding: 0px 10px;
+}
+
 .header-link-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     transition: inherit;
+    padding: 10px 0px 0px 0px;
     gap: 20px;
 
     /* background: pink; */
-    /* background-color: var(--background-color); */
+    background-color: var(--background-color);
     border-radius: 0px 0px 8px 8px;
+}
+
+#header.scrolled .header-link-container {
+    padding: 0px;
+    gap: 2px;
 }
 
 .header-link{

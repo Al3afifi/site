@@ -1,7 +1,10 @@
+import { useState } from 'react'
 import './About.css'
 import skills from './skills.json'
 
 function About() {
+    const [expanded, setExpanded] = useState(false);
+
     return (
         <div id='about_page'>
             
@@ -14,7 +17,7 @@ function About() {
                     I have hands-on experience in building scalable fault-tolerant systems, working with virtualization technologies like Docker, building cloud based solutions, and creating and testing a variety of machine learning models. 
                     I also worked extensively with web development, creating responsive and user-friendly interfaces using React and other modern frameworks on both the front-end and back-end.
                 </p>
-                <p className='about-summary'>
+                <p className={`about-summary about-extra ${expanded ? 'about-extra-expanded' : ''}`}>
                     I started my journey in programming and development at a young age, initially exploring HTML and CSS then later Java to create simple games. I was driven with the hope of building the same types of creations that captivated me as a child, especially seeing how they brought together families and friends with ease.
 
 
@@ -22,6 +25,13 @@ function About() {
                     I've carried that same drive, of seeing my builds coming to life, towards more complex projects and the infrastructure behind much of the software we use daily, where I am exploring now.
                     In my free time, I enjoy playing football (American soccer), mountain hiking & biking, and working out.
                 </p>
+                <button
+                    type='button'
+                    className='about-expand-btn'
+                    onClick={() => setExpanded((prev) => !prev)}
+                >
+                    {expanded ? 'Show less' : 'Expand'}
+                </button>
             </div>
             <div className='about-skills-section'>
                 <h2 className='about-subheader'>Skills</h2>

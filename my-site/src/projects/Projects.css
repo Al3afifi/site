@@ -181,3 +181,11 @@
         gap: 4px;
     }
 }
+
+@media (max-width: 600px) {
+    .projects-container {
+        width: 94vw;
+        padding: 12px;
+        box-sizing: border-box;
+    }
+}
