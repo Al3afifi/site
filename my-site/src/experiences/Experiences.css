@@ -178,3 +178,11 @@
         gap: 6px;
     }
 }
+
+@media (max-width: 600px) {
+    .experiences-container {
+        width: 94vw;
+        padding: 12px;
+        box-sizing: border-box;
+    }
+}

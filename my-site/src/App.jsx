@@ -2,6 +2,7 @@ import { useState, useEffect, Fragment } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import headshot from './assets/headshot.jpg'
+import headshot2 from './assets/headshot2.jpg'
 import sunset from './imgs/sunset2.webp'
 import Header from './header/Header.jsx'
 import About from './about/About.jsx'
@@ -27,11 +28,23 @@ function App() {
   const [count, setCount] = useState(0)
   const [theme, setTheme] = useState(() => localStorage.getItem('theme') || 'dark');
   const [themeOpen, setThemeOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
     localStorage.setItem('theme', theme);
   }, [theme]);
+
+  useEffect(() => {
+      const handleScroll = () => {
+          setScrolled(
+              document.body.scrollTop > 300 || document.documentElement.scrollTop > 300
+          );
+      };
+      window.addEventListener('scroll', handleScroll, { passive: true });
+      handleScroll();
+      return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
 
   return (
@@ -43,7 +56,7 @@ function App() {
       <div className='home'>
 
         <div className='title-container'>
-          <img src={headshot} className="headshot" alt="Me" />
+          <img src={scrolled ? headshot2 : headshot} className="headshot" alt="Me" />
           <div className='title'>
             <h1>Muhammad Alafifi</h1>
             <h1>Software Engineer</h1>

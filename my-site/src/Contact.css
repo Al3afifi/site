@@ -26,3 +26,15 @@
     min-width:50vw;
     gap: 20px;
 }
+
+@media (max-width: 600px) {
+    .contact-divider {
+        width: 94vw;
+    }
+
+    .contact-section {
+        width: 94vw;
+        flex-direction: column;
+        gap: 6px;
+    }
+}

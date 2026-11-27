@@ -1,29 +1,47 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './Header.css'
+import ParticlesBackground from '../components/ParticlesBackground'
 
-// When the user scrolls down 50px from the top of the document, resize the header's font size
-window.onscroll = function() {scrollFunction()};
+const HEADER_PARTICLE_OVERRIDES = {
+    particles: {
+        number: {
+            value: 25,
+            density: { enable: false },
+        },
+    },
+    interactivity: {
+        events: {
+            onClick: { enable: false },
+        },
+    },
+};
 
-function scrollFunction() {
-    if (!(document.body.scrollTop > 50 || document.documentElement.scrollTop > 50)) {
-        document.getElementById("header").style.fontSize = "30px";
-        document.getElementById("header").style.padding = "20px 10px";
-        document.querySelector(".header-link-container").style.gap = "20px";
-        // document.querySelector(".header-link-container").classList.remove("scrolled");
-    } else {
-        document.getElementById("header").style.fontSize = "25px";
-        document.getElementById("header").style.padding = "0px 10px";
-        document.querySelector(".header-link-container").style.gap = "2px";
-        document.querySelector(".header-link-container").style.backgroundColor = "var(--background-color)";
-        // document.querySelector(".header-link-container").classList.add("scrolled");
-    }
-}
 function Header() {
+    const [scrolled, setScrolled] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setScrolled(
+                document.body.scrollTop > 50 || document.documentElement.scrollTop > 50
+            );
+        };
+
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        handleScroll();
+
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
     return (
-    <>
-        <div id="header">
-            <a className='header-link' href='/'>Home</a>
+        <div id="header" className={scrolled ? 'scrolled' : ''}>
+            <ParticlesBackground
+                id="header-particles"
+                className={`header-particles ${scrolled ? 'header-particles-hidden' : ''}`}
+                optionsOverride={HEADER_PARTICLE_OVERRIDES}
+            />
+            <div className='header-link-container'>
+                <a className='header-link' href='/'>Home</a>
+            </div>
             <div className='header-link-container'>
                 <a className='header-link' href='#about_page'>About</a>
                 <a className='header-link' href='#experiences_page'>Portfolio</a>
@@ -31,8 +49,7 @@ function Header() {
                 <a className='header-link' href='#contact_page'>Contact</a>
             </div>
         </div>
-    </>
-    )
+    );
 }
 
 export default Header
