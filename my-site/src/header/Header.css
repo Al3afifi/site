@@ -2,7 +2,7 @@
 #header {
     /* background-color: var(--background-color); Grey background */
     /* opacity: 0.5; */
-    /* padding:20px 10px; Some padding */
+    padding:20px 10px; 
     color: var(--text-color);
     text-align: center; /* Centered text */
     font-size: 30px; /* Big font size */
@@ -24,7 +24,7 @@
     justify-content: space-between;
     align-items: center;
     transition: inherit;
-    /* gap: 20px; */
+    gap: 20px;
 
     /* background: pink; */
     /* background-color: var(--background-color); */
