@@ -1,5 +1,20 @@
 import { useState, useEffect } from 'react'
 import './Header.css'
+import ParticlesBackground from '../components/ParticlesBackground'
+
+const HEADER_PARTICLE_OVERRIDES = {
+    particles: {
+        number: {
+            value: 25,
+            density: { enable: false },
+        },
+    },
+    interactivity: {
+        events: {
+            onClick: { enable: false },
+        },
+    },
+};
 
 function Header() {
     const [scrolled, setScrolled] = useState(false);
@@ -19,6 +34,11 @@ function Header() {
 
     return (
         <div id="header" className={scrolled ? 'scrolled' : ''}>
+            <ParticlesBackground
+                id="header-particles"
+                className={`header-particles ${scrolled ? 'header-particles-hidden' : ''}`}
+                optionsOverride={HEADER_PARTICLE_OVERRIDES}
+            />
             <div className='header-link-container'>
                 <a className='header-link' href='/'>Home</a>
             </div>

@@ -35,6 +35,17 @@
     /* background: pink; */
     background-color: var(--background-color);
     border-radius: 0px 0px 8px 8px;
+    position: relative;
+    z-index: 1;
+}
+
+.header-particles {
+    opacity: 1;
+    transition: opacity 0.4s ease;
+}
+
+.header-particles.header-particles-hidden {
+    opacity: 0;
 }
 
 #header.scrolled .header-link-container {

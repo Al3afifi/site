@@ -1,57 +1,11 @@
 import './Projects.css';
-import { useEffect, useMemo, useState } from 'react';
 import projectsData from './projects.json';
-import particlesConfig from './assets/particles.json';
-import { Particles, ParticlesProvider } from '@tsparticles/react';
-import { loadSlim } from '@tsparticles/slim';
-
-const getCssParticleColor = () =>
-    getComputedStyle(document.documentElement)
-        .getPropertyValue('--particles-color')
-        .trim() || '#ffffff';
+import ParticlesBackground from '../components/ParticlesBackground';
 
 function Projects({ theme }) {
-    const [particleColor, setParticleColor] = useState(getCssParticleColor);
-
-    useEffect(() => {
-        const updateColor = () => setParticleColor(getCssParticleColor());
-        updateColor();
-
-        // Wait for App's effect to update data-theme on <html>, then read the resolved hex color
-        const observer = new MutationObserver(updateColor);
-        observer.observe(document.documentElement, {
-            attributes: true,
-            attributeFilter: ['data-theme'],
-        });
-        return () => observer.disconnect();
-    }, [theme]);
-
-    const particleOptions = useMemo(() => ({
-        ...particlesConfig,
-        fullScreen: { enable: false },
-        particles: {
-            ...particlesConfig.particles,
-            paint: {
-                ...particlesConfig.particles?.paint,
-                color: {
-                    value: particleColor,
-                },
-            },
-            links: {
-                ...particlesConfig.particles.links,
-                color: particleColor,
-            },
-        },
-    }), [particleColor]);
-
     return (
         <div id="projects_page">
-            <ParticlesProvider init={loadSlim}>
-                <Particles
-                    id="particles-js"
-                    options={particleOptions}
-                />
-            </ParticlesProvider>
+            <ParticlesBackground id="particles-js" theme={theme} />
 
 
             <div className="projects-container">
